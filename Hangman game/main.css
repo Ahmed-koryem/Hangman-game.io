@@ -1,0 +1,254 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+.game-containare{
+        width: 1000px;
+        margin: 20px auto;
+}
+.game-containare .game-info{
+    display: flex;
+    justify-content: space-between;
+}
+.game-containare .game-info .category span{
+    text-transform: capitalize;
+    color:cadetblue;
+    font-weight: bold;
+}
+.row{
+    display: flex;
+    
+}
+.drawe-conatin{
+    flex: 1;
+    background-color: #F8F8F8;
+    padding: 20px;
+    height: 324px;
+}
+.thedrawe{
+    width: 60px;
+    height: 280px;
+    border-bottom: 4px solid #222;
+    position: relative;
+    margin: auto;
+    left: -60px;
+    display: none;
+}
+.thedrawe .the-stage{
+    display: none;
+}
+.thedrawe .the-stage::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    border-left: 4px solid #222;
+    
+    
+}
+.thedrawe .the-hang{
+    display: none;
+}
+.thedrawe .the-hang::before{
+    content: '';
+    position: absolute;
+    border-bottom: 4px solid #333;
+    width: 130px;
+    top: 20px;
+    left: 30px;   
+
+
+}
+.thedrawe .the-hang::after{
+    content: '';
+    position: absolute;
+    border-left: 4px solid #333;
+    width: 4px;
+    left: 156px;
+    height: 50px;
+    top: 20px;
+}
+.thedrawe .the-rope{
+    
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 4px dashed #222;
+    border-radius: 50%;
+    top: 70px;
+    left: 115px;
+    display: none;
+
+
+
+}
+.thedrawe .head{
+    
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 4px solid #222;
+    border-radius: 50%;
+    top: 90px;
+    left: 130px;
+    display: none;
+}
+.thedrawe .body{
+    position: absolute;
+    width: 4px;
+    height: 85px;
+    background-color: #333;
+    top: 136px;
+    left: 153px;
+    display: none;
+
+
+}
+.the-man .hands{
+    display: none;
+}
+.the-man .hands::before{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 55px;
+    background-color: #333;
+    transform: rotate(30deg);
+    left: 140px;
+    top: 158px;
+}
+.thedrawe .hands::after{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 55px;
+    background-color: #333;
+    transform: rotate(-30deg);
+    left: 167px;
+    top: 158px;
+}
+.thedrawe .legs{
+    display: none;
+}
+.thedrawe .legs::before{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 55px;
+    background-color: #333;
+    transform: rotate(20deg);
+    left: 143px;
+    top: 216px;
+
+
+}
+.thedrawe .legs::after{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 55px;
+    background-color: #333;
+    transform: rotate(-20deg);
+    left: 164px;
+    top: 216px;
+
+}
+.row .letters {
+    
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    
+}
+.row .letters span{
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    background-color: #a9a9a9;
+    color: #333;
+    font-size: 24px;
+    margin-right: 10px;
+    line-height: 55px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+}
+.letters span.clicked{
+    background-color: #5e5959;
+    opacity: .2;
+    pointer-events: none;
+    
+}
+.letters.fineshed{
+    pointer-events: none;
+
+}
+.letter-guss{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.letter-guss span{
+    width: 55px;
+    height: 40px;
+    background-color: aquamarine;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 6px;
+    border-bottom: 3px solid black;
+}
+.drawe-conatin.wrong-1 .thedrawe{
+    display: block;
+}
+.drawe-conatin.wrong-2 .the-stage{
+    display: block;
+}
+.drawe-conatin.wrong-3 .the-hang{
+    display: block;
+
+}
+.drawe-conatin.wrong-4 .the-rope{
+    display: block;
+}
+.drawe-conatin.wrong-5 .head{
+    display: block;
+}
+.drawe-conatin.wrong-6 .body{
+    display: block;
+}
+.drawe-conatin.wrong-7 .hands{
+    display: block;
+}
+.drawe-conatin.wrong-8 .legs{
+    display: block;
+}
+.popup{
+    position: fixed;
+    background-color: #009687af;
+    padding: 100px 20px;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+    text-align: center;
+    font-size: 40px;
+    border: 1px solid #CCC;
+    color: #FFF;
+}
+.you-wine{
+    position: fixed;
+    background-color: #009687af;
+    padding: 100px 20px;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+    text-align: center;
+    font-size: 40px;
+    border: 1px solid #CCC;
+    color: #FFF;
+
+}
